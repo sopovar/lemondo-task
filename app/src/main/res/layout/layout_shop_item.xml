@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:elevation="10dp"
+    android:weightSum="14"
+    android:orientation="vertical"
+    android:background="@drawable/layout_bg">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/cardview_rounded"
+        android:layout_weight="10">
+
+        <ImageView
+            android:id="@+id/shopMainImage"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sparkler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/transparentItemsContainer"
+
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:background="#88000000"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/textView"
+                app:srcCompat="@drawable/ic_baseline_bedtime" />
+
+            <TextView
+                android:id="@+id/nextWorkingDay"
+                android:layout_width="match_parent"
+                android:textSize="16sp"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/medium"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:id="@+id/buttonContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/button_white_corners"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp">
+
+                <Button
+                    android:id="@+id/button"
+                    android:textColor="@color/white"
+                    android:background="#00000000"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/preOrder" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <ImageView
+            android:id="@+id/shopIcon"
+            android:padding="4dp"
+            android:src="@drawable/ic_baseline_qr_code_scanner_24"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/shopNameText"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:fontFamily="@font/firagoregular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/deliveryText"
+        android:text="@string/noDelivery"
+        android:gravity="center_vertical"
+        android:textSize="12sp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/firagoregular"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"/>
+
+</LinearLayout>

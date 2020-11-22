@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ShopList</string>
+    <string name="preOrder">შეკვეთის დაგეგმვა</string>
+    <string name="noDelivery">No Delivery</string>
+    <string name="searchEverywhere">მოძებნე ყველგან</string>
+</resources>
