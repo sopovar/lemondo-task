@@ -24,7 +24,7 @@
 
         <LinearLayout
             android:id="@+id/transparentItemsContainer"
-
+            android:visibility="gone"
             android:orientation="vertical"
             android:layout_gravity="center"
             android:background="#88000000"

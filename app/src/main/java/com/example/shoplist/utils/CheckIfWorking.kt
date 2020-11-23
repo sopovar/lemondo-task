@@ -11,13 +11,13 @@ import java.util.*
 object CheckIfWorking {
 
     val weekDaysGE = listOf(
+        "კვირა",
         "ორშაბათი",
         "სამშაბათი",
         "ოთხშაბათი",
         "ხუთშაბათი",
         "პარასკევი",
-        "შაბათი",
-        "კვირა"
+        "შაბათი"
     )
 
     private fun calculateDate(hours: List<WorkingHours>): DateCalculator {
@@ -53,7 +53,7 @@ object CheckIfWorking {
                 val tomorrowIndex = (day + 1) % 7
                 val isWorkingDay = workingHours[tomorrowIndex]
                 if (isWorkingDay.working) {
-                    return "${weekDaysGE[dayInWeek - 1]}, ${isWorkingDay.from} - ${isWorkingDay.to}"
+                    return "${weekDaysGE[day - 1]}, ${isWorkingDay.from} - ${isWorkingDay.to}"
                 }
             }
         }
