@@ -22,8 +22,4 @@ class MainApp : Application(), KodeinAware {
         bind() from singleton { ShopRepository() }
         bind() from provider { ShopViewModelFactory(this@MainApp, instance()) }
     }
-
-    companion object {
-
-    }
 }

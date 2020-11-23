@@ -7,7 +7,6 @@ import android.net.ConnectivityManager.*
 import android.net.NetworkCapabilities.*
 import android.os.Build
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.shoplist.MainApp
@@ -97,11 +96,9 @@ class ShopViewModel(
         }
     }
 
-
+    @Suppress("DEPRECATION")
     private fun hasInternetConnection(): Boolean {
-        val connectivityManager = getApplication<MainApp>().getSystemService(
-            Context.CONNECTIVITY_SERVICE
-        ) as ConnectivityManager
+        val connectivityManager = getApplication<MainApp>().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             val activeNetwork = connectivityManager.activeNetwork ?: return false
             val capabilities =

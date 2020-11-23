@@ -26,8 +26,8 @@ object CheckIfWorking {
 
         val today = hours[day - 1]
         val currentDay: String = SimpleDateFormat("dd-M-yyyy", Locale.getDefault()).format(Date())
-        val dateFrom = SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("$currentDay ${today.from}")
-        val dateTo = SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("$currentDay ${today.to}")
+        val dateFrom = SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault()).parse("$currentDay ${today.from}")
+        val dateTo = SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault()).parse("$currentDay ${today.to}")
 
         val currentTime = System.currentTimeMillis()
 
